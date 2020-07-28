@@ -1,0 +1,244 @@
+:root{
+  --blue: rgb(15, 116, 153);
+  --orange: rgb(255, 46, 0);
+  --space-blue: rgb(15, 45, 73);
+}
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body{
+  font-size: 1.6rem;
+  margin: 0;
+  color: white;
+  font-family: sans-serif;
+  background-color: var(--space-blue);
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+img{
+  width: 100%;
+  max-height: 100%;
+}
+a{
+  text-decoration: none;
+  color: var(--blue);
+}
+a:hover{
+  cursor: pointer;
+}
+small{
+  display: inline-block;
+}
+
+
+/* ===============================================================================
+    Tools
+ =============================================================================== */
+.container{
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.title{
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: justify;
+  font-weight: 700;
+  text-align: center;
+}
+.emphasis{
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+@media only screen and (min-width: 76.8rem){
+   .title{
+     font-size: 5rem;
+    }
+    .emphasis{
+      font-size: 5.5rem;
+    }
+}
+
+.bold{
+  font-weight: 900;
+}
+.orange{
+  color: var(--orange);
+}
+
+.btn-container{
+  justify-content: center;
+  margin: 3rem 0;
+}
+.btn{
+  border-radius: 5rem;
+  background-color: white;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  margin: 0 auto;
+}
+
+/*Gravity animation*/
+@keyframes gravity {
+  0% {bottom: 0px;}
+  50% {bottom: 3rem;}
+  100% {bottom: 0px;}
+}
+
+/* ===============================================================================
+    Navbar
+ =============================================================================== */
+.navbar-container{
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar-logo{
+  height: 8rem;
+  max-width: 15rem;
+}
+
+
+/* ===============================================================================
+    Cover
+ =============================================================================== */
+.cover{
+   width: 100%;
+   min-height: 100vh;
+   background: url(../assets/img/bgd/Mask_Group_1.png);
+   background-position: center center;
+   background-size: cover;
+}
+.cover-container{
+  justify-content: space-around;
+}
+.cover .container > div{
+  width: 100%;
+  max-height: 50vh;
+  padding: 3rem 0;
+}
+.astronaut-container{
+  margin-top: 8rem;
+}
+.cover-title{
+  margin-top: 0;
+}
+.cover-title .title{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 76.8rem){
+  .cover-container{
+    justify-content: space-between;
+  }
+  .cover .container > div{
+    width: 50%;
+    height: auto;
+    padding: 1.5rem;
+    margin-top: calc(20vh);
+  }
+}
+
+.astronaut-container img{
+  height: auto;
+  position: relative;
+  animation: gravity 5s infinite;
+}
+
+.more-info{
+  width: 14rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.more-info img{
+  width: 5rem;
+}
+@media only screen and (min-width: 76.8rem){
+   .more-info{
+     position: absolute;
+     left: calc(50% - 7rem);
+     bottom: 1rem;
+    }
+}
+
+/* ===============================================================================
+    Areas
+ =============================================================================== */
+.areas{
+  width: 100%;
+  height: 100vh;
+}
+.card-container{
+  margin-top: 9rem;
+}
+.card{
+  width: calc(33.3% - 1rem);
+  background-color: red;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 .5rem 1rem rgba(255, 255, 255, 0.15);
+  padding: 3rem 1rem;
+}
+.card:nth-child(2){
+  background-color: var(--orange);
+  transform: scale(1.2);
+  box-shadow: 0 .5rem 1rem rgba(36, 36, 36, 0.93);
+}
+.card .img-card-container{
+  width: 15rem;
+  margin: 0 auto;
+}
+
+/*Line above title*/
+.divisor-line{
+  width: 10rem;
+  margin: 0 auto;
+  background-color: var(--orange);
+  justify-content: center;
+}
+.card:nth-child(2) .divisor-line{
+  background-color: white;
+}
+.card:nth-child(2) .divisor-line span{
+  border: .1rem solid var(--orange);
+}
+.divisor-line span{
+  width: 1rem;
+  height: .1rem;
+  border: .1rem solid white;
+  margin-right: .5rem;
+  border-radius: 1rem;
+}
+.divisor-line span:last-of-type{
+  margin-right: 0;
+}
+
+.card-title{
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+.card ul{
+  color: var(--space-blue);
+  margin-top: 3rem;
+}
+.card ul li{
+  margin-bottom: 1rem;
+}
+.card:nth-child(2) ul{
+  color: white;
+}
