@@ -1,4 +1,5 @@
 import { Events } from './Events.js';
+import { Valida } from './Valida.js';
 
 
 /* ============================================================
@@ -35,10 +36,7 @@ $(".form div input").keyup(function(event) {
 /*Validating fields*/
 $(".form-step-1").submit(function(event) {
   event.preventDefault();
-
-  let fields = $(this).serializeArray();
-  fields.forEach((item, i) => {
-    console.log(item);
-  });
-
+  const fields = $(this).serializeArray();
+  const valida = new Valida();
+  valida.textField(fields)
 });
