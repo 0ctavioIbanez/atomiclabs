@@ -17,50 +17,26 @@
 
 
     <section class="datos">
-      <!-- progress bar -->
-      <div class="container container-progress-bar">
-        <div class="progress-bar-numbers flex">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>4</span>
+      <div class="flex container">
+        <div class="container-form">
+          <form class="form-step-1" action="index.html" method="post">
+            <div class="form-fields">
+              <label for="name">Nombre</label>
+              <input type="text" name="name" value="">
+              <img src="./assets/img/icons/ic_lock_24px.png" alt="locked">
+            </div>
+            <div class="form-fields">
+              <label for="surname">Apellidos</label>
+              <input type="text" name="surname" value="">
+              <img src="./assets/img/icons/ic_lock_24px.png" alt="locked">
+            </div>
+            <div class="flex btn-container">
+              <input type="submit" class="btn" name="" value="Enviar">
+            </div>
+          </form>
         </div>
-        <div class="progress-bar">
-          <div class="loaded-progress-bar"></div>
-        </div>
-      </div>
-      <!-- End progress bar -->
-
-
-      <div class="relative container">
-        <div class="form-image flex">
-          <div class="">
-            <h1 class="title emphasis"><span class="step-meet">1</span> Te queremos<span class="orange"> conocer</span></h1>
-
-            <form class="form-meet">
-              <div class="form-field">
-                <label for="nombre">Nombre(s)</label>
-                <input type="text" name="nombre" value="">
-                <small class="error">El nombre deberá tener mínimo 5 caractéres</small>
-                <img src="./assets/img/icons/ic_lock_24px.png" alt="">
-              </div>
-              <div class="form-field">
-                <label for="apellidos">Apellidos</label>
-                <input type="text" name="apellidos" value="">
-                <small class="error">El nombre deberá tener mínimo 5 caractéres</small>
-                <img src="./assets/img/icons/ic_lock_24px.png" alt="">
-              </div>
-              <div class="flex btn-container btn-bottom">
-                <input type="submit" class="btn btn-2" value="Enviar">
-              </div>
-            </form>
-
-          </div>
-
-
-          <div class="astronaut-container">
-            <img src="./assets/img/bgd/Group_4033.png" alt="astronaut">
-          </div>
+        <div class="astronaut-container">
+          <img src="./assets/img/bgd/Group_4032.png" alt="astronaut">
         </div>
       </div>
     </section>
@@ -68,6 +44,6 @@
 
 
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/main.js" type="module" charset="utf-8"></script>
+  <script src="/js/main.js" type="module" charset="utf-8"></script>
   </body>
 </html>

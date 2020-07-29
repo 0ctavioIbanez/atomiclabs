@@ -35,6 +35,9 @@ p{
   font-size: 1.8rem;
   margin: 1rem 0;
 }
+input{
+  border: none;
+}
 input:focus{
   outline: none;
 }
@@ -65,7 +68,7 @@ input:focus{
   text-transform: uppercase;
   font-weight: 900;
 }
-@media only screen and (min-width: 76.8rem){
+@media only screen and (min-width: 36rem){
    .title{
      font-size: 5rem;
     }
@@ -146,7 +149,7 @@ input:focus{
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 76.8rem){
+@media only screen and (min-width: 36rem){
   .cover-container{
     justify-content: space-between;
   }
@@ -172,7 +175,7 @@ input:focus{
 .more-info img{
   width: 5rem;
 }
-@media only screen and (min-width: 76.8rem){
+@media only screen and (min-width: 36rem){
    .more-info{
      position: absolute;
      left: calc(50% - 7rem);
@@ -209,7 +212,7 @@ input:focus{
   width: 15rem;
   margin: 0 auto;
 }
-@media only screen and (min-width: 76.8rem){
+@media only screen and (min-width: 36rem){
   .card{
     width: calc(33.3% - 1rem);
     margin-bottom: 0;
@@ -324,7 +327,7 @@ input:focus{
   left: -1rem;
 }
 
-@media only screen and (min-width: 76.8rem){
+@media only screen and (min-width: 36rem){
    .card-about-specs{
      width: calc(33.3% - 1rem);
      margin-bottom: 0;
@@ -377,7 +380,7 @@ input:focus{
   font-size: 1.8rem;
 }
 
-@media only screen and (min-width: 76.8rem){
+@media only screen and (min-width: 36rem){
   .table-advantages thead{
     font-size: 2rem;
   }
@@ -406,7 +409,7 @@ input:focus{
   height: 1.5rem;
 }
 
-@media only screen and (min-width: 76.8rem){
+@media only screen and (min-width: 36rem){
   .table-advantages td img{
     width: 2rem;
     height: 2rem;
@@ -471,7 +474,7 @@ footer > .flex > div:nth-child(1){
   margin-right: 0;
 }
 
-@media only screen and (min-width: 76.8rem){
+@media only screen and (min-width: 36rem){
   footer > .flex > div{
     width: 50%;
   }
@@ -498,109 +501,61 @@ footer > .flex > div:nth-child(1){
    padding-top: 9rem;
  }
 
- .container-progress-bar{
-   position: relative;
+ .datos .flex .astronaut-container{
    width: 100%;
+   height: 20rem;
+   order: 1;
+ }
+ .container-form{
+   order: 2;
  }
 
-.progress-bar-numbers{
-  width: calc(100% - 40rem);
-  justify-content: space-around;
-}
-.progress-bar-numbers span{
-  border: .1rem solid white;
-  padding-top: .3rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  text-align: center;
-  margin-bottom: 3rem;
-  opacity: 60%;
-}
- .progress-bar{
-   position: absolute;
-   top: 4rem;
-   left: 0;
-   width: calc(100% - 40rem);
-   height: 1.5rem;
-   background-color: rgba(255, 255, 255, 0.8);
-   border-radius: 2rem;
- }
- .loaded-progress-bar{
-   width: .1rem;
-   height: inherit;
-   background: var(--orange);
-   border-radius: 2rem;
+
+ @media only screen and (min-width: 36rem){
+   .datos .flex .astronaut-container{
+     width: 35%;
+     height: auto;
+     order: 2;
+   }
+   .container-form{
+     width: 65%;
+     order: 1;
+   }
  }
 
- .step-meet{
-   background-color: var(--orange);
-   border-radius: 50%;
-   width: 4.5rem;
-   height: 4.5rem;
-   padding-top: .3rem;
-   font-size: 3rem;
-   display: inline-block;
- }
-
-.relative{
-  position: relative;
-}
-.form-image{
-  position: absolute;
-  top: -6rem;
-  max-width: 120rem;
-  width: 100%;
-  margin: 0 auto;
-}
- .form-image > div{
-   width: calc(100% - 35rem);
- }
- .form-image > div:nth-child(2){
-   width: 35rem;
- }
-
- .form-field{
-   width: 40rem;
+ .form-fields{
+   width: 100%;
    margin-bottom: 3rem;
    position: relative;
  }
-.form-field input{
-   width: 100%;
-   font-size: 1.8rem;
-   padding: 1rem 1rem .5rem;
-   color: var(--space-blue);
+.form-fields label{
+  display: block;
 }
-.form-field img{
-  width: 1.5rem;
-  filter: invert(60%);
+.form-fields input{
+  width: 100%;
+  font-size: 1.8rem;
+  padding: .5rem 1rem;
+  color: var(--space-blue);
+}
+.form-fields img{
   position: absolute;
   bottom: 1rem;
-  right: 1rem
-}
-.error{
-  color: var(--orange);
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: -1.5rem;
-  display: none;
+  right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(40%);
 }
 
-.btn-2{
-  background-color: var(--orange);
-  color: white;
-  padding-left: 6rem;
-  padding-right: 6rem;
-  border: none;
+@media only screen and (min-width: 36rem){
+  .form-fields{
+    width: 30rem;
+  }
 }
-.btn-2:hover{
-  cursor: pointer;
-  transition: all .3s ease;
-  box-shadow: .2rem .2rem .5rem var(--orange);
+
+.form-step-1 .btn-container{
+  justify-content: flex-end!important;
+  background-color: red;
 }
-.btn-bottom{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.form-step-1 .btn-container{
+
 }
