@@ -87,13 +87,25 @@ input:focus{
 .btn-container{
   justify-content: center;
   margin: 3rem 0;
+  height: 5rem!important;
 }
 .btn{
   border-radius: 5rem;
   background-color: white;
   padding: 1rem 3rem;
   font-size: 1.6rem;
-  margin: 0 auto;
+}
+
+.btn:hover{
+  cursor: pointer;
+  box-shadow: .1rem .2rem .5rem var(--blue);
+  transition: all .3s ease;
+}
+
+.btn2{
+  width: 20rem;
+  background-color: var(--orange);
+  color: white;
 }
 
 /*Gravity animation*/
@@ -496,25 +508,35 @@ footer > .flex > div:nth-child(1){
  =============================================================================== */
  .datos{
    width: 100%;
-   min-height: 100vh;
+   height: 100vh;
    background: url(../assets/img/bgd/Mask_Group_1.png);
+   background-size: cover;
+   background-position: center center;
    padding-top: 9rem;
  }
 
 .datos .flex{
-  height: calc(70vh - 9rem);
+  height: calc(100vh - 9rem);
+  align-items: stretch;
 }
 
  .datos .flex .astronaut-container{
    width: 100%;
-   height: 20rem;
+   max-height: 40vh;
    order: 1;
+   margin: 0;
+   text-align: center;
  }
- .container-form{
-   order: 2;
-   position: relative;
+ .datos .flex .astronaut-container img{
+   height: 20rem;
+   width: auto;
  }
 
+ .form{
+   order: 2;
+   position: relative;
+   width: 100%;
+ }
 
  @media only screen and (min-width: 36rem){
    .datos .flex .astronaut-container{
@@ -522,7 +544,11 @@ footer > .flex > div:nth-child(1){
      height: auto;
      order: 2;
    }
-   .container-form{
+   .datos .flex .astronaut-container img{
+     width: 100%;
+     height: auto;
+   }
+   .form{
      width: 65%;
      order: 1;
    }
@@ -555,10 +581,7 @@ footer > .flex > div:nth-child(1){
   .form-fields{
     width: 30rem;
   }
-}
-
-.form-step-1 .btn-container input{
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  .form .btn-container{
+    justify-content: flex-end;
+  }
 }
