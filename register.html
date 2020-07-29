@@ -39,14 +39,19 @@
 
             <form class="form-meet">
               <div class="form-field">
-                <label for="">Nombre(s)</label>
-                <input type="text" name="" value="">
+                <label for="nombre">Nombre(s)</label>
+                <input type="text" name="nombre" value="">
+                <small class="error">El nombre deberá tener mínimo 5 caractéres</small>
                 <img src="./assets/img/icons/ic_lock_24px.png" alt="">
               </div>
               <div class="form-field">
-                <label for="">Apellidos</label>
-                <input type="text" name="" value="">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" value="">
+                <small class="error">El nombre deberá tener mínimo 5 caractéres</small>
                 <img src="./assets/img/icons/ic_lock_24px.png" alt="">
+              </div>
+              <div class="flex btn-container btn-bottom">
+                <input type="submit" class="btn btn-2" value="Enviar">
               </div>
             </form>
 
@@ -58,12 +63,11 @@
           </div>
         </div>
       </div>
-
     </section>
 
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/main.js" charset="utf-8"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/main.js" type="module" charset="utf-8"></script>
   </body>
 </html>

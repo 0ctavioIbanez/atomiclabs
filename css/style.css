@@ -35,7 +35,9 @@ p{
   font-size: 1.8rem;
   margin: 1rem 0;
 }
-
+input:focus{
+  outline: none;
+}
 
 /* ===============================================================================
     Tools
@@ -491,7 +493,7 @@ footer > .flex > div:nth-child(1){
  =============================================================================== */
  .datos{
    width: 100%;
-   height: 100vh;
+   min-height: 100vh;
    background: url(../assets/img/bgd/Mask_Group_1.png);
    padding-top: 9rem;
  }
@@ -568,7 +570,6 @@ footer > .flex > div:nth-child(1){
    font-size: 1.8rem;
    padding: 1rem 1rem .5rem;
    color: var(--space-blue);
-   outline-color: transparent;
 }
 .form-field img{
   width: 1.5rem;
@@ -576,4 +577,30 @@ footer > .flex > div:nth-child(1){
   position: absolute;
   bottom: 1rem;
   right: 1rem
+}
+.error{
+  color: var(--orange);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1.5rem;
+  display: none;
+}
+
+.btn-2{
+  background-color: var(--orange);
+  color: white;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  border: none;
+}
+.btn-2:hover{
+  cursor: pointer;
+  transition: all .3s ease;
+  box-shadow: .2rem .2rem .5rem var(--orange);
+}
+.btn-bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
