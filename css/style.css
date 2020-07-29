@@ -104,7 +104,7 @@ p{
 .navbar-container{
   width: 100%;
   height: 8rem;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -340,13 +340,12 @@ p{
 }
 .about-char{
   width: 100%;
-  min-height: 70rem;
+  min-height: 75rem;
   background-color: rgba(15, 116, 153, 0.8);
   border-radius: 6rem 6rem 0 0;
   position: absolute;
   top: -23rem;
   z-index: 0;
-  /* background: url(../assets/img/bgd/footer.jpg); */
 }
 
 /*Table advantages head*/
@@ -421,13 +420,67 @@ p{
  =============================================================================== */
 footer{
   width: 100%;
-  height: 10rem;
+  min-height: 10rem;
   background-color: black;
   position: relative;
+  font-size: 1.6rem;
+  font-weight: 900;
+  padding-top: 3rem;
 }
 .planet-image{
   position: absolute;
   z-index: -1;
   width: 100%;
   top: -55rem;
+}
+
+footer > .flex > div{
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.privacity-social{
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: right;
+  order: 1;
+}
+footer > .flex > div:nth-child(1){
+  order: 2;
+}
+
+.social{
+  order: 1;
+  margin-bottom: 1.5rem;
+}
+.privacity{
+  color: white;
+  text-decoration: underline;
+  order: 2;
+}
+
+.social a img{
+  width: 3rem;
+  height: 3rem;
+  margin-right: 3rem;
+}
+.social a:last-of-type img{
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 76.8rem){
+  footer > .flex > div{
+    width: 50%;
+  }
+  footer > .flex > div:nth-child(1){
+    order: 1;
+  }
+  .privacity-social{
+    order: 2;
+    flex-direction: row;
+  }
+  .social{
+    order: 2;
+  }
 }
