@@ -81,8 +81,7 @@ $(".datos .flex").click(function(event) {
 
     const valida = new Valida();
     const evt = new Event();
-
-    valida.verifyCode(codeToVerify);
+    console.log( valida.verifyCode(codeToVerify) );
 
     // if ( valida.numberField(field) === "ok" ) {
     //   evt.successAnimate();

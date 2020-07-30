@@ -5,7 +5,7 @@ session_start();
     echo json_encode($_POST);
   }
   elseif (isset($_POST['verify'])) {
-    echo json_encode($_POST);
+    verify();
   }
 
 function sendSMS(){
@@ -36,5 +36,13 @@ function sendSMS(){
 }
 
 function verify(){
-  
+  $codeVerify = intval($_POST["code"]);
+  $code = intval($_SESSION['code'][0]);
+  if ($code === $codeVerify) {
+    $res = array('status' => 'ok');
+  }
+  else {
+    $res = array('status' => 'wrong');
+  }
+  echo json_encode($res);
 }

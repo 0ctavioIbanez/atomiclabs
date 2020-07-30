@@ -39,6 +39,7 @@ export class Valida {
     const data = new FormData();
     data.append('code', codeToVerify);
     data.append('verify', 1);
+    let status = "";
 
     const conf = {
       method: "POST",
@@ -47,6 +48,8 @@ export class Valida {
 
     fetch("php/testAltiriaSms.php", conf)
     .then( data => { return data.json() } )
-    .then( res => { console.log(res) } );
+    .then( res => { status = res.status; } );
+
+    return status;
   }
 }
