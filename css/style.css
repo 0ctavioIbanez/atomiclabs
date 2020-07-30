@@ -124,6 +124,7 @@ input:focus{
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 5;
 }
 
 .navbar-logo{
@@ -617,6 +618,14 @@ footer > .flex > div:nth-child(1){
   text-align: center;
   font-size:
 }
+.step-checked{
+  background-color: var(--orange);
+  border: none;
+}
+.step-actual{
+  border: .2rem solid var(--orange);
+  color: var(--orange);
+}
 .prog-bar{
   width: 100%;
   height: 1.5rem;
@@ -649,7 +658,7 @@ footer > .flex > div:nth-child(1){
 .success-next{
   position: fixed;
   top: 0;
-  right: 0vh;
+  left: -200vh;
 }
 .success-next img{
   height: 130vh;
@@ -657,8 +666,12 @@ footer > .flex > div:nth-child(1){
   transform: rotate(50deg);
 }
 .fire{
-  height: 100vh;
-  width: inherit;
-  background-color: red;
+  height: 50rem;
+  width: 50rem;
+  border-radius: 3rem;
+  background: radial-gradient(yellow, rgb(208, 123, 34), red);
   transform: rotate(45deg);
+  position: absolute;
+  left: -30rem;
+  bottom: 20rem;
 }

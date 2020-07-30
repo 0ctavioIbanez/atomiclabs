@@ -38,10 +38,11 @@ $(".form-step-1").submit(function(event) {
   event.preventDefault();
   const fields = $(this).serializeArray();
   const valida = new Valida();
-  const evt = new Event();
+  const evt = new Event(1);
 
   if ( valida.textField(fields) === "ok" ) {
     evt.successAnimate();
+    evt.updateBar();
   }
   else {
     evt.errorDialog("Sólo letras y más de 5 caracteres");

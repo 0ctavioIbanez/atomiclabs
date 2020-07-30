@@ -1,4 +1,9 @@
 export class Event {
+  constructor(step){
+    this.step = step;
+  }
+
+  //Bubble error animation
   errorDialog( type ){
     let error = `
       <div class="error">
@@ -17,14 +22,32 @@ export class Event {
     }, 1500);
   }
 
+  //Rocks animation
   successAnimate(){
     let success = `
         <div class="success-next">
+          <div class="fire"></div>
           <img src="./assets/img/bgd/rocket-removebg-preview.png" alt="">
         </div>`;
     $("body").append(success);
     setTimeout( ()=>{
-      $(".success-next").css({'transition':'all .9s ease', 'left':'300vh'});
-    }, 100);
+      $(".success-next").css({'transition':'all .9s ease', 'left':'200rem'});
+    }, 200);
+  }
+
+  //Increase the progress of bar
+  updateBar(){
+    if (this.step == 1) {
+      console.log("Bien");
+    }
+    else if (this.step == 2) {
+
+    }
+    else if (this.step == 3) {
+
+    }
+    else {
+      
+    }
   }
 }
