@@ -2,14 +2,14 @@
 session_start();
 
   if (isset($_POST["sendsms"])) {
-    echo json_encode($_POST);
+    sendSMS();
   }
-  elseif (isset($_POST['verify'])) {
+  else if (isset($_POST['verify'])) {
     verify();
   }
 
 function sendSMS(){
-  $number = $_POST["number"];
+  $number = intval($_POST["number"]);
   $code = rand(1000, 9999);
   $_SESSION['code'][0] = $code;
 
@@ -30,9 +30,9 @@ function sendSMS(){
   $response = $altiriaSMS->sendSMS($sDestination, "Tu código de verificación para AtomicLabs es:".$code);
 
   if (!$response)
-    echo "El envío ha terminado en error";
+    echo json_encode("El envío ha terminado en error");
   else
-    echo $response;
+    echo json_encode($response);
 }
 
 function verify(){

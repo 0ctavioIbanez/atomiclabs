@@ -675,3 +675,34 @@ footer > .flex > div:nth-child(1){
   left: -30rem;
   bottom: 20rem;
 }
+
+/*Sending code animation*/
+.sending-code{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--space-blue);
+  padding-top: calc(40vh - 10rem);
+  display: none;
+}
+.sending-code div{
+  width: 30rem;
+  height: 20rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.sending-code img{
+  width: 20rem;
+  position: absolute;
+  left: 0;
+  animation: gravity 5s infinite;
+  margin: 0 auto;
+}
+.sending-code p{
+  position: absolute;
+  bottom: -3rem;
+}

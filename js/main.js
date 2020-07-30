@@ -58,10 +58,12 @@ $(".datos .flex").click(function(event) {
 
     const valida = new Valida();
     const evt = new Event(2);
+    evt.animateSendCode();
     let field = $('input[type="text"]').val();
 
     if ( valida.numberField(field) === "ok" ) {
       valida.sendSMS(field);
+      $('sending-code').fadeOut();
       evt.successAnimate();
       evt.updateBar();
     }
@@ -78,17 +80,8 @@ $(".datos .flex").click(function(event) {
   if (getClass === "form3") {
     event.preventDefault();
     let codeToVerify = $('input[type="text"]').val();
-
     const valida = new Valida();
-    const evt = new Event();
-    console.log( valida.verifyCode(codeToVerify) );
-
-    // if ( valida.numberField(field) === "ok" ) {
-    //   evt.successAnimate();
-    //   evt.updateBar();
-    // }
-    // else {
-    //   evt.errorDialog("Ingresa tu número a 10 dígitos");
-    // }
+    
+    valida.verifyCode(codeToVerify);
   }
 });

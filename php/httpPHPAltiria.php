@@ -191,7 +191,7 @@ class AltiriaSMS {
 
 	public function logMsg($msg) {
 		if ($this->getDebug()===true)
-		    // error_log("\n".date(DATE_RFC2822)." : ".$msg."\r\n", 3, "app.log");
+		    error_log("\n".date(DATE_RFC2822)." : ".$msg."\r\n", 3, "app.log");
 	}
 }
 ?>

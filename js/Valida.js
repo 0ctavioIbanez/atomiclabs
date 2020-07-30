@@ -1,3 +1,5 @@
+import { Event } from './Event.js';
+
 export class Valida {
   textField(fields){
     const regExp = /^([A-Zñáéíóú]+){5}$/i;
@@ -48,8 +50,21 @@ export class Valida {
 
     fetch("php/testAltiriaSms.php", conf)
     .then( data => { return data.json() } )
-    .then( res => { status = res.status; } );
+    .then( res => {
+      this.event(res);
+    });
+  }
 
-    return status;
+  event(res){
+
+    if (res.status === "ok") {
+      const evt = new Event(3);
+      evt.animateVerified();
+      evt.updateBar();
+    }
+    else {
+      const evt = new Event();
+      evt.errorDialog("El código es incorrecto");
+    }
   }
 }

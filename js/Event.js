@@ -36,7 +36,7 @@ export class Event {
   }
 
   //Increase the progress of bar and load new form
-  updateBar(){
+  updateBar(step){
     if (this.step == 1) {
       $(".datos .flex").load("components/step-2.html", () => {
         $(".prog-bar .loaded-prog-bar").css({'transition':'all .3s ease', 'width':'37.5%'});
@@ -48,12 +48,40 @@ export class Event {
       })
     }
     else if (this.step == 3) {
-      $(".datos .flex").load("components/step-3.html", () => {
+      $(".datos .flex").load("components/step-4.html", () => {
         $(".prog-bar .loaded-prog-bar").css({'transition':'all .3s ease', 'width':'87.5%'});
       })
     }
     else {
 
     }
+  }
+
+  animateSendCode(){
+      let airplane = `
+        <div class="sending-code">
+          <div class="">
+            <img src="./assets/img/bgd/airplane.png" alt="">
+            <p>Te estamos enviando el código</p>
+          </div>
+        </div>
+        `;
+      $("body").append(airplane).fadeIn("fast");
+      setTimeout(() => {
+        $(".sending-code").fadeOut("fast");
+      }, 1500);
+  }
+
+  animateVerified(){
+    let verified = `<div class="sending-code">
+                      <div class="">
+                        <img src="./assets/img/bgd/checkmark.png" alt="">
+                        <p>Te estamos enviando el código</p>
+                      </div>
+                    </div>`;
+    $("body").append(verified).fadeIn("fast");
+    setTimeout(() => {
+      $(".sending-code").fadeOut("fast");
+    }, 1500);
   }
 }
