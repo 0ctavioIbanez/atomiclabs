@@ -629,3 +629,36 @@ footer > .flex > div:nth-child(1){
   background-color: red;
   border-radius: inherit
 }
+
+
+/* ===============================================================================
+    Messages
+ =============================================================================== */
+.error{
+  width: 1rem;
+  height: 1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  text-align: center;
+  background-color: var(--orange);
+  box-shadow: 0 .2rem .5rem var(--blue);
+  display: none;
+}
+.success-next{
+  position: fixed;
+  top: 0;
+  right: 0vh;
+}
+.success-next img{
+  height: 130vh;
+  width: auto;
+  transform: rotate(50deg);
+}
+.fire{
+  height: 100vh;
+  width: inherit;
+  background-color: red;
+  transform: rotate(45deg);
+}

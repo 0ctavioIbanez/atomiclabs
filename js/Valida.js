@@ -1,13 +1,15 @@
 export class Valida {
   textField(fields){
-    const regExp = /^[a-zA-Z ]+$/;
+    const regExp = /^([A-Zñáéíóú]+){5}$/i;
     let counter = 0;
+    let res = "";
 
     fields.forEach((item, i) => {
-      if ( regExp.test(item.vaue) ) {
+      if ( regExp.test(item.value) ) {
         counter++;
       }
     });
-    counter === fields.length ? console.log("Bien") : console.log("mal");
+    counter === fields.length ? res = "ok" : res = "wrong";
+    return res;
   }
 }

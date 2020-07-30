@@ -1,4 +1,4 @@
-import { Events } from './Events.js';
+import { Event } from './Event.js';
 import { Valida } from './Valida.js';
 
 
@@ -38,5 +38,13 @@ $(".form-step-1").submit(function(event) {
   event.preventDefault();
   const fields = $(this).serializeArray();
   const valida = new Valida();
-  valida.textField(fields)
+  const evt = new Event();
+
+  if ( valida.textField(fields) === "ok" ) {
+    evt.successAnimate();
+  }
+  else {
+    evt.errorDialog("Sólo letras y más de 5 caracteres");
+  }
+
 });
