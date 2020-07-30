@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>AtomicLabs | Join Us</title>
-  </head>
-  <body>
-    <div class="navbar-container">
-      <div class="container">
-        <div class="navbar-logo">
-          <img src="./assets/img/icons/logo.webp" alt="logo">
-        </div>
-      </div>
-    </div>
 
+  <?php include 'components/navbar.php'; ?>
     <!-- Cover -->
     <section class="cover">
       <div class="container flex">
