@@ -19,4 +19,19 @@ export class Valida {
     regExp.test(field) ? res = "ok" : res = "wrong";
     return res;
   }
+
+  sendSMS(number){
+    const data = new FormData();
+    data.append('number', `52${number}`);
+    data.append('sendsms', 1);
+
+    const conf = {
+      method: "POST",
+      body: data
+    }
+
+    fetch("php/testAltiriaSms.php", conf)
+    .then( data => { return data.json() } )
+    .then( res => { console.log(res) } );
+  }
 }

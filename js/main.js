@@ -61,11 +61,32 @@ $(".datos .flex").click(function(event) {
     let field = $('input[type="text"]').val();
 
     if ( valida.numberField(field) === "ok" ) {
+      valida.sendSMS(field);
       evt.successAnimate();
       evt.updateBar();
     }
     else {
+      evt.errorDialog("Ingresa tu número a 10 dígitos");
+    }
+  }
+});
 
+
+//Form step 3-1 | Destructuring necessary
+$(".datos .flex").click(function(event) {
+  let getClass = event.target.getAttribute("name");
+  if (getClass === "form3") {
+    event.preventDefault();
+
+    const valida = new Valida();
+    const evt = new Event();
+
+    if ( valida.numberField(field) === "ok" ) {
+      evt.successAnimate();
+      evt.updateBar();
+    }
+    else {
+      evt.errorDialog("Ingresa tu número a 10 dígitos");
     }
   }
 });
