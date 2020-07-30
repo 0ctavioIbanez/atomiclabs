@@ -35,15 +35,17 @@ export class Event {
     }, 200);
   }
 
-  //Increase the progress of bar
+  //Increase the progress of bar and load new form
   updateBar(){
     if (this.step == 1) {
-      $(".datos .flex").load("../components/step-2.html", () =>{
+      $(".datos .flex").load("../components/step-2.html", () => {
         $(".prog-bar .loaded-prog-bar").css({'transition':'all .3s ease', 'width':'37.5%'});
       });
     }
     else if (this.step == 2) {
-
+      $(".datos .flex").load("../components/step-3.html", () => {
+        $(".prog-bar .loaded-prog-bar").css({'transition':'all .3s ease', 'width':'62.5%'});
+      })
     }
     else if (this.step == 3) {
 

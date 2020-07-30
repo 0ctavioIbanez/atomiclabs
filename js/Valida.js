@@ -12,4 +12,11 @@ export class Valida {
     counter === fields.length ? res = "ok" : res = "wrong";
     return res;
   }
+
+  numberField(field){
+    const regExp = /^([0-9]+){10}$/;
+    let res = "";
+    regExp.test(field) ? res = "ok" : res = "wrong";
+    return res;
+  }
 }

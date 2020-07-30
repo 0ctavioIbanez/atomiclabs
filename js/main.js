@@ -47,5 +47,25 @@ $(".form-step-1").submit(function(event) {
   else {
     evt.errorDialog("Sólo letras y más de 5 caracteres");
   }
+});
 
+
+//Form step 2 | Destructuring necessary
+$(".datos .flex").click(function(event) {
+  let getClass = event.target.getAttribute("name");
+  if (getClass === "form2") {
+    event.preventDefault();
+
+    const valida = new Valida();
+    const evt = new Event(2);
+    let field = $('input[type="text"]').val();
+
+    if ( valida.numberField(field) === "ok" ) {
+      evt.successAnimate();
+      evt.updateBar();
+    }
+    else {
+
+    }
+  }
 });
