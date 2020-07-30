@@ -1,13 +1,17 @@
 <?php
+session_start();
 
   if (isset($_POST["sendsms"])) {
     echo json_encode($_POST);
   }
+  elseif (isset($_POST['verify'])) {
+    echo json_encode($_POST);
+  }
 
-
-function verify(){
+function sendSMS(){
   $number = $_POST["number"];
   $code = rand(1000, 9999);
+  $_SESSION['code'][0] = $code;
 
   include('httpPHPAltiria.php');
 
@@ -29,4 +33,8 @@ function verify(){
     echo "El envío ha terminado en error";
   else
     echo $response;
+}
+
+function verify(){
+  
 }

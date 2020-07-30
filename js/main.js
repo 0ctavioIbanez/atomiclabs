@@ -77,16 +77,19 @@ $(".datos .flex").click(function(event) {
   let getClass = event.target.getAttribute("name");
   if (getClass === "form3") {
     event.preventDefault();
+    let codeToVerify = $('input[type="text"]').val();
 
     const valida = new Valida();
     const evt = new Event();
 
-    if ( valida.numberField(field) === "ok" ) {
-      evt.successAnimate();
-      evt.updateBar();
-    }
-    else {
-      evt.errorDialog("Ingresa tu número a 10 dígitos");
-    }
+    valida.verifyCode(codeToVerify);
+
+    // if ( valida.numberField(field) === "ok" ) {
+    //   evt.successAnimate();
+    //   evt.updateBar();
+    // }
+    // else {
+    //   evt.errorDialog("Ingresa tu número a 10 dígitos");
+    // }
   }
 });

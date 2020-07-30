@@ -1,19 +1,4 @@
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>AtomicLabs | Join Us</title>
-  </head>
-  <body>
-
-    <div class="navbar-container">
-      <div class="container">
-        <div class="navbar-logo">
-          <img src="./assets/img/icons/logo.webp" alt="logo">
-        </div>
-      </div>
-    </div>
+<?php include 'components/navbar.php'; ?>
 
 
     <section class="datos">
@@ -59,7 +44,4 @@
     </section>
 
 
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/main.js" type="module" charset="utf-8"></script>
-  </body>
-</html>
+<?php include 'components/footer.php'; ?>

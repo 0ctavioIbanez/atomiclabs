@@ -34,4 +34,19 @@ export class Valida {
     .then( data => { return data.json() } )
     .then( res => { console.log(res) } );
   }
+
+  verifyCode(codeToVerify){
+    const data = new FormData();
+    data.append('code', codeToVerify);
+    data.append('verify', 1);
+
+    const conf = {
+      method: "POST",
+      body: data
+    }
+
+    fetch("php/testAltiriaSms.php", conf)
+    .then( data => { return data.json() } )
+    .then( res => { console.log(res) } );
+  }
 }
