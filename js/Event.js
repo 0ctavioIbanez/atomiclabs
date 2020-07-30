@@ -38,7 +38,9 @@ export class Event {
   //Increase the progress of bar
   updateBar(){
     if (this.step == 1) {
-      console.log("Bien");
+      $(".datos .flex").load("../components/step-2.html", () =>{
+        $(".prog-bar .loaded-prog-bar").css({'transition':'all .3s ease', 'width':'37.5%'});
+      });
     }
     else if (this.step == 2) {
 
@@ -47,7 +49,7 @@ export class Event {
 
     }
     else {
-      
+
     }
   }
 }
