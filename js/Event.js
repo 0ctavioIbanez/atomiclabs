@@ -45,15 +45,17 @@ export class Event {
     else if (this.step == 2) {
       $(".datos .flex").load("components/step-3.html", () => {
         $(".prog-bar .loaded-prog-bar").css({'transition':'all .3s ease', 'width':'62.5%'});
-      })
+      });
     }
     else if (this.step == 3) {
       $(".datos .flex").load("components/step-4.html", () => {
         $(".prog-bar .loaded-prog-bar").css({'transition':'all .3s ease', 'width':'87.5%'});
-      })
+      });
     }
-    else {
-
+    else if (this.step == 4){
+      $(".datos .flex").load("components/step-finish.html", () => {
+        $(".prog-bar .loaded-prog-bar").css({'transition':'all .3s ease', 'width':'100%'});
+      });
     }
   }
 
@@ -75,7 +77,7 @@ export class Event {
   animateVerified(){
     let verified = `<div class="sending-code">
                       <div class="">
-                        <img src="./assets/img/bgd/checkmark.png" alt="">
+                        <img src="./assets/img/icons/checkmark.png" alt="">
                         <p>Te estamos enviando el código</p>
                       </div>
                     </div>`;
@@ -83,5 +85,9 @@ export class Event {
     setTimeout(() => {
       $(".sending-code").fadeOut("fast");
     }, 1500);
+  }
+
+  sendEmail(){
+    const data = new FormData();
   }
 }

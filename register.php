@@ -18,6 +18,9 @@
                 <div class="loaded-prog-bar"></div>
               </div>
               <h1 class="title emphasis">te queremos<span class="orange">  conocer</span></h1>
+              <div class="back-step">
+                <small> &#xFFE9; Regresar</small>
+              </div>
             </div>
             <!-- End progress bar -->
 

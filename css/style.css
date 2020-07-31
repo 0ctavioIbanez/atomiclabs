@@ -603,6 +603,9 @@ footer > .flex > div:nth-child(1){
   width: 100%;
   margin-bottom: 9rem;
 }
+.container-prog-bar h1{
+  text-align: left;
+}
 .steps-container{
   justify-content: space-around;
   display: flex;
@@ -790,6 +793,6 @@ footer > .flex > div:nth-child(1){
   color: white;
   position: absolute;
   left: 0;
-  bottom: .2rem;
+  bottom: .1rem;
   z-index: 4;
 }

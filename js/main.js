@@ -96,13 +96,16 @@ $("body").click(function(event) {
     $(".terms-container").fadeIn("fast");
   }
   else if (target === "close") {
-    $("#close").parent().parent().fadeOut("fast")
+    $("#close").parent().parent().fadeOut("fast");
   }
   else if (target === "agree-terms") {
     $("input[type='submit']").attr('disabled', false);
   }
   else if (target === "btn-submit") {
     event.preventDefault();
-    console.log("enviado");
+    const evt = new Event(4);
+    evt.successAnimate();
+    evt.updateBar();
+    evt.sendEmail():
   }
 });
