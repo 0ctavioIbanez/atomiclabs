@@ -1,0 +1,26 @@
+***** Descarga
+  Puede descargar los archivos del código accediendo a la liga https://github.com/0ctavioIbanez/atomiclabs
+  y dando click en el botón verde del lado superior derecho de la pantalla.
+
+  Así mismo, puede ser descargado desde la consola usando el comando
+  [git clone https://github.com/0ctavioIbanez/atomiclabs], teniendo previamente instalado el servicio "git".
+
+
+
+***** Ejecución
+
+  Este software contiene archivos en php, lo cual requiere un servicio de hosting para poder ejecutarse.
+
+  Para inicializarlo localmente, se deberán mover todas las carpetas de este proyecto
+  a la zona de trabajo de su servidor local, el cual normalmente es nombrado "htdocs" ó "public".
+  En mi caso, utilicé XAMPP.
+
+  Una vez inicializado el servicio de hosting, se podrá acceder al proyecto mediante la siguiente ruta
+  http://localhost/atomiclabs/register.php
+
+
+
+  ***** Otros
+    Este sistema consume una API de envío de SMS gratuitos, por lo que la cantidad de mensajes disponibles
+    para enviar están limitados a menos de 10.
+    Si requiere continuar probando el sistema, puede comunicarse conmigo para crear otra cuenta para el servicio.
