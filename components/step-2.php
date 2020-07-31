@@ -16,7 +16,7 @@
               <div class="back-step">
                 <small class="back" step="1"> &#xFFE9; Regresar</small>
               </div>
-              
+
                <!-- title -->
                <div class="flex step-number-container">
                  <span class="step-number">2</span><h1 class="title emphasis">valida tu<span class="orange"> celular</span></h1>
@@ -33,7 +33,7 @@
               <input type="text" name="cellphone" required placeholder="55 1234 5678">
             </div>
             <div class="flex btn-container">
-              <input type="submit" class="btn btn2" name="form2" value="Continuar">
+              <input type="submit" class="btn btn2" name="form2" value="Continuar" disabled>
             </div>
           </form>
 

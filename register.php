@@ -37,7 +37,7 @@
         <img src="./assets/img/icons/ic_lock_24px.png" alt="locked" loading="lazy">
       </div>
       <div class="flex btn-container">
-        <input type="submit" class="btn btn2" name="submit" value="Enviar">
+        <input type="submit" class="btn btn2" name="submit" value="Enviar" disabled>
       </div>
     </form>
 

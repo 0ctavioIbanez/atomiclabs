@@ -46,7 +46,7 @@
             </div>
             <p>¿No recibiste el código? <a href="#" class="bold">Reenviar código</a></p>
             <div class="flex btn-container">
-              <input type="submit" class="btn btn2" name="form3" value="Validar código">
+              <input type="submit" class="btn btn2" name="form3" value="Validar código" disabled>
             </div>
           </form>
 

@@ -47,7 +47,7 @@ export class Event {
   //Increase the progress of bar and load new form
   updateBar() {
     if (this.step == 1) {
-      $(".datos .flex").load("components/step-2.html", () => {
+      $(".datos .flex").load("components/step-2.php", () => {
         $(".prog-bar .loaded-prog-bar").css({
           'transition': 'all .3s ease',
           'width': '37.5%'
@@ -61,14 +61,14 @@ export class Event {
         });
       });
     } else if (this.step == 3) {
-      $(".datos .flex").load("components/step-4.html", () => {
+      $(".datos .flex").load("components/step-4.php", () => {
         $(".prog-bar .loaded-prog-bar").css({
           'transition': 'all .3s ease',
           'width': '87.5%'
         });
       });
     } else if (this.step == 4) {
-      $(".datos .flex").load("components/step-finish.html", () => {
+      $(".datos .flex").load("components/step-finish.php", () => {
         $(".prog-bar .loaded-prog-bar").css({
           'transition': 'all .3s ease',
           'width': '100%'
@@ -81,7 +81,7 @@ export class Event {
     if (this.step == 1) {
       window.location.href="register.php";
     } else if (this.step == 2) {
-      $(".datos .flex").load("components/step-2.html", () => {
+      $(".datos .flex").load("components/step-2.php", () => {
         $(".prog-bar .loaded-prog-bar").css({
           'transition': 'all .3s ease',
           'width': '37.5%'

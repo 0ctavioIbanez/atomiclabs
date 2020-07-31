@@ -109,6 +109,7 @@ $("body").click(function(event) {
  $("body").click(function(event) {
    let target = event.target.getAttribute("class");
    let destinStep = parseInt(event.target.getAttribute("step"));
+   let agreeTerms = event.target.getAttribute("type");
 
    if (target === "back") {
      const evt = new Event(destinStep);
@@ -120,10 +121,23 @@ $("body").click(function(event) {
      const evt = new Event(2);
      evt.previousStep();
    }
+
+   //Enable last button
+   else if (agreeTerms === "checkbox") {
+     $("input[type='checkbox']")
+     .css({'transition':'all .3s ease',
+           'opacity':'100%'})
+     .attr('disabled', false);
+   }
  });
 
 /*Index: more info (scroll down)*/
 $(".more-info").click(function(event) {
   let height = $(window).height();
   $(window).scrollTop(height);
+});
+
+/*Enable button by Checkbox*/
+$("body").click(function(event) {
+  /* Act on the event */
 });
