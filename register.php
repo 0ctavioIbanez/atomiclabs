@@ -8,7 +8,7 @@
 
             <!-- progress bar -->
             <div class="container-prog-bar">
-              <div class="steps-container">
+              <div class="steps-container flex">
                 <span class="steps step-actual">1</span>
                 <span class="steps">2</span>
                 <span class="steps">3</span>
@@ -40,6 +40,7 @@
             </div>
           </form>
 
+        <!-- Floating astronaut -->
         <div class="astronaut-container">
           <img src="./assets/img/bgd/Group_4033.png" alt="astronaut">
         </div>

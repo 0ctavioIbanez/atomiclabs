@@ -1,35 +1,34 @@
           <form class="form form-step-2" action="index.html" method="post">
 
-          <!-- progress bar -->
-          <div class="container-prog-bar">
-            <div class="steps-container">
-              <span class="steps step-checked">&#x2713;</span>
-              <span class="steps step-actual">2</span>
-              <span class="steps">3</span>
-              <span class="steps">4</span>
+            <!-- progress bar -->
+            <div class="container-prog-bar">
+              <div class="steps-container flex">
+                <span class="steps step-checked">&#x2713;</span>
+                <span class="steps step-actual">2</span>
+                <span class="steps">3</span>
+                <span class="steps">4</span>
+              </div>
+              <div class="prog-bar">
+                <div class="loaded-prog-bar"></div>
+              </div>
+              <h1 class="title emphasis">valida tu<span class="orange"> celular</span></h1>
             </div>
-            <div class="prog-bar">
-              <div class="loaded-prog-bar"></div>
+            <!-- End progress bar -->
+
+            <p class="mb-3"><span class="bold">Necesitamos validar tu número para continuar</span></p>
+            <p class="mb-3">Ingresa tu número a 10 dígitos y te enviaremos un código SMS</p>
+
+            <!-- Field and button -->
+            <div class="form-fields">
+              <label for="cellphone">Número de Celular</label>
+              <input type="text" name="cellphone" required placeholder="55 1234 5678">
             </div>
-            <h1 class="title emphasis">valida tu<span class="orange">  celular</span></h1>
+            <div class="flex btn-container">
+              <input type="submit" class="btn btn2" name="form2" value="Continuar">
+            </div>
+          </form>
+
+          <!-- Astronaut image -->
+          <div class="astronaut-container">
+            <img src="./assets/img/bgd/Group_4034.png" alt="astronaut">
           </div>
-          <!-- End progress bar -->
-
-          <p><span class="bold">Necesitamos validar tu número para continuar</span><br>
-             Ingresa tu número a 10 dígitos y te enviaremos un código SMS
-          </p>
-
-
-          <div class="form-fields">
-            <label for="cellphone">Número de Celular</label>
-            <input type="text" name="cellphone" required placeholder="55 1234 5678">
-          </div>
-          <div class="flex btn-container">
-            <input type="submit" class="btn btn2" name="form2" value="Continuar">
-          </div>
-        </form>
-
-
-    <div class="astronaut-container">
-      <img src="./assets/img/bgd/Group_4034.png" alt="astronaut">
-    </div>

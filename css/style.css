@@ -42,6 +42,9 @@ input{
 input:focus{
   outline: none;
 }
+input[type="submit"]{
+  opacity: 50%;
+}
 
 /* ===============================================================================
     Tools
@@ -114,6 +117,10 @@ input:focus{
   0% {bottom: 0px;}
   50% {bottom: 3rem;}
   100% {bottom: 0px;}
+}
+
+.mb-3{
+  margin-bottom: 3rem;
 }
 
 /* ===============================================================================
@@ -506,11 +513,13 @@ footer > .flex > div:nth-child(1){
 
 
 /* ===============================================================================
-    Register.html
+    Register.html | End of index
  =============================================================================== */
+/* Main container of steps files */
 .datos{
    width: 100%;
    min-height: 100vh;
+   height: auto;
    padding-top: 9rem;
  }
 .datos::before{
@@ -523,48 +532,21 @@ footer > .flex > div:nth-child(1){
   left: 0;
   bottom: 0;
   right: 0;
+  min-height: 100vh;
+  height: auto;
   transform: rotate(180deg);
 }
 
 .datos > .flex{
-  height: calc(100vh - 9rem);
+  min-height: calc(100vh - 9rem);
   align-items: stretch;
 }
 
- .datos .flex .astronaut-container{
-   width: 100%;
-   max-height: 40vh;
-   order: 1;
-   margin: 0;
-   text-align: center;
- }
- .datos .flex .astronaut-container img{
-   height: 20rem;
-   width: auto;
- }
-
+/* Form style */
  .form{
-   order: 2;
    position: relative;
    width: 100%;
  }
-
- @media only screen and (min-width: 36rem){
-   .datos .flex .astronaut-container{
-     width: 35%;
-     height: auto;
-     order: 2;
-   }
-   .datos .flex .astronaut-container img{
-     width: 100%;
-     height: auto;
-   }
-   .form{
-     width: 65%;
-     order: 1;
-   }
- }
-
  .form-fields{
    width: 100%;
    margin-bottom: 3rem;
@@ -602,25 +584,23 @@ footer > .flex > div:nth-child(1){
 /*Progress bar*/
 .container-prog-bar{
   width: 100%;
-  margin-bottom: 9rem;
+  margin-bottom: 6rem;
 }
 .container-prog-bar h1{
   text-align: left;
 }
 .steps-container{
   justify-content: space-around;
-  display: flex;
   margin-bottom: 1rem;
 }
 .steps{
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: .1rem solid rgba(255, 255, 255, 0.8);
   display: inline-block;
   width: 2.5rem;
   height: 2.5rem;
   padding-top: .3rem;
   border-radius: 50%;
   text-align: center;
-  font-size:
 }
 .step-checked{
   background-color: var(--orange);
@@ -639,9 +619,44 @@ footer > .flex > div:nth-child(1){
 .loaded-prog-bar{
   width: 12.5%;
   height: inherit;
-  background-color: red;
-  border-radius: inherit
+  background-color: var(--orange);
+  border-radius: inherit;
 }
+
+@media only screen and (min-width: 36rem){
+  .container-prog-bar{
+    margin-bottom: 9rem;
+  }
+}
+
+
+
+/* astronaut images */
+.datos > .flex > .astronaut-container{
+  width: 100%;
+  max-height: 40vh;
+  margin: 0;
+  text-align: center;
+}
+.datos > .flex > .astronaut-container > img{
+  height: 20rem;
+  width: auto;
+}
+
+@media only screen and (min-width: 36rem){
+  .datos .flex .astronaut-container{
+    width: 35%;
+    height: auto;
+  }
+  .datos .flex .astronaut-container img{
+    width: 100%;
+    height: auto;
+  }
+  .form{
+    width: 65%;
+  }
+}
+
 
 
 /* ===============================================================================
@@ -659,6 +674,7 @@ footer > .flex > div:nth-child(1){
   box-shadow: 0 .2rem .5rem var(--blue);
   display: none;
 }
+
 .success-next{
   position: fixed;
   top: 0;
@@ -712,7 +728,9 @@ footer > .flex > div:nth-child(1){
 }
 
 
-/*Terms and conditions*/
+/* ===============================================================================
+  Terms and conditions
+ =============================================================================== */
 #terms{
   color: white;
   text-decoration: underline;
@@ -794,6 +812,6 @@ footer > .flex > div:nth-child(1){
   color: white;
   position: absolute;
   left: 0;
-  bottom: .1rem;
+  bottom: 0;
   z-index: 4;
 }

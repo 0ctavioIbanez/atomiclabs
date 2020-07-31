@@ -1,37 +1,43 @@
           <form class="form form-step-2" action="index.html" method="post">
 
-          <!-- progress bar -->
-          <div class="container-prog-bar">
-            <div class="steps-container">
-              <span class="steps step-checked">&#x2713;</span>
-              <span class="steps step-checked">&#x2713;</span>
-              <span class="steps step-actual">3</span>
-              <span class="steps">4</span>
+            <!-- progress bar -->
+            <div class="container-prog-bar">
+              <div class="steps-container flex">
+                <span class="steps step-checked">&#x2713;</span>
+                <span class="steps step-checked">&#x2713;</span>
+                <span class="steps step-actual">3</span>
+                <span class="steps">4</span>
+              </div>
+              <div class="prog-bar">
+                <div class="loaded-prog-bar"></div>
+              </div>
+              <h1 class="title emphasis">código de <span class="orange"> verificación</span></h1>
             </div>
-            <div class="prog-bar">
-              <div class="loaded-prog-bar"></div>
+            <!-- End progress bar -->
+
+            <p class="bold">Te enviamos un SMS al número:</p>
+            <!-- Phone number printed by session  -->
+            <p class="mb-3">
+              <?php
+                if(isset($_SESSION['code'][0])){
+                  echo "Aqui va el número";
+                }
+              ?>
+            </p>
+            <p class="mb-3">Ingresa el código de verificación</p>
+
+            <!-- form fields -->
+            <div class="form-fields">
+              <label for="cellphone">Código de verificación</label>
+              <input type="text" name="code" required placeholder="1234">
             </div>
-            <h1 class="title emphasis">código de <span class="orange">  verificación</span></h1>
+            <p>¿No recibiste el código? <a href="#" class="bold">Reenviar código</a></p>
+            <div class="flex btn-container">
+              <input type="submit" class="btn btn2" name="form3" value="Validar código">
+            </div>
+          </form>
+
+          <!-- astronaut image -->
+          <div class="astronaut-container">
+            <img src="./assets/img/bgd/Group_4034.png" alt="astronaut">
           </div>
-          <!-- End progress bar -->
-
-          <p class="bold">Te enviamos un SMS al número: <br>
-
-
-          </p>
-          <p>Ingresa el código de verificación</p>
-
-          <div class="form-fields">
-            <label for="cellphone">Código de verificación</label>
-            <input type="text" name="code" required placeholder="1234">
-          </div>
-          <p>¿No recibiste el código? <a href="#" class="bold">Reenviar código</a></p>
-          <div class="flex btn-container">
-            <input type="submit" class="btn btn2" name="form3" value="Validar código">
-          </div>
-        </form>
-
-
-    <div class="astronaut-container">
-      <img src="./assets/img/bgd/Group_4034.png" alt="astronaut">
-    </div>
