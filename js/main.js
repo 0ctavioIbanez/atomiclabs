@@ -108,8 +108,10 @@ $("body").click(function(event) {
  ============================================================ */
  $("body").click(function(event) {
    let target = event.target.getAttribute("class");
+   let destinStep = parseInt(event.target.getAttribute("step"));
    if (target === "back") {
-     
+     const evt = new Event(destinStep);
+     evt.previousStep();
    }
  });
 
