@@ -706,3 +706,90 @@ footer > .flex > div:nth-child(1){
   position: absolute;
   bottom: -3rem;
 }
+
+
+/*Terms and conditions*/
+#terms{
+  color: white;
+  text-decoration: underline;
+}
+#terms:hover, #close:hover{
+  cursor: pointer;
+}
+.terms-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: gray;
+  padding-top: 3rem;
+  display: none;
+}
+#close{
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  color: red;
+  border-radius: .1rem solid red;
+}
+.terms-notice{
+  position: relative;
+  margin: 0 auto;
+  width: 50rem;
+  max-width: 100%;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 1rem;
+  z-index: 5;
+  color: var(--space-blue);
+}
+.terms-notice div{
+  text-align: center;
+}
+.terms-notice div img{
+  width: 3rem;
+  height: 3rem;
+}
+.terms-notice p{
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+.terms-fields{
+  width: 100%;
+  margin-top: 3rem;
+  position: relative;
+}
+.terms-fields label{
+  margin-left: 3rem;
+}
+.terms-fields input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+#agree-terms:checked::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--orange);
+  z-index: 3;
+}
+#agree-terms:checked::after{
+  content: '✔';
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: .2rem;
+  z-index: 4;
+}

@@ -27,7 +27,7 @@ function sendSMS(){
 
   $sDestination = $number;
 
-  $response = $altiriaSMS->sendSMS($sDestination, "Tu código de verificación para AtomicLabs es:".$code);
+  $response = $altiriaSMS->sendSMS($sDestination, "Tu código de verificación para AtomicLabs es: ".$code);
 
   if (!$response)
     echo json_encode("El envío ha terminado en error");

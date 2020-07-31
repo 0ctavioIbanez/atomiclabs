@@ -81,7 +81,28 @@ $(".datos .flex").click(function(event) {
     event.preventDefault();
     let codeToVerify = $('input[type="text"]').val();
     const valida = new Valida();
-    
     valida.verifyCode(codeToVerify);
+  }
+});
+
+
+/* ============================================================
+ Some animations
+ ============================================================ */
+// Terms and conditions
+$("body").click(function(event) {
+  let target = event.target.getAttribute("id");
+  if (target === "terms") {
+    $(".terms-container").fadeIn("fast");
+  }
+  else if (target === "close") {
+    $("#close").parent().parent().fadeOut("fast")
+  }
+  else if (target === "agree-terms") {
+    $("input[type='submit']").attr('disabled', false);
+  }
+  else if (target === "btn-submit") {
+    event.preventDefault();
+    console.log("enviado");
   }
 });
