@@ -615,6 +615,7 @@ footer > .flex > div:nth-child(1){
   height: 1.5rem;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 2rem;
+  margin-bottom: 1.5rem
 }
 .loaded-prog-bar{
   width: 12.5%;
