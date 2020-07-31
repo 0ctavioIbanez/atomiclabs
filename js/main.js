@@ -106,6 +106,13 @@ $("body").click(function(event) {
     const evt = new Event(4);
     evt.successAnimate();
     evt.updateBar();
-    evt.sendEmail():
+    evt.sendEmail();
   }
+});
+
+
+/*Index: more info*/
+$(".more-info").click(function(event) {
+  let height = $(window).height();
+  $(window).scrollTop(height);
 });

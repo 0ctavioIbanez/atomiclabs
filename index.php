@@ -29,6 +29,7 @@
         </div>
       </div>
 
+      <!-- Scrollable button -->
       <div class="more-info">
         <img src="./assets/img/icons/Group_4013.png" alt="more-info">
         <small>Quiero saber más</small>
@@ -37,7 +38,7 @@
     </section>
     <!-- End Cover -->
 
-    <!-- Areas -->
+    <!-- Areas: where we get specialized-->
     <section class="areas container">
       <h1 class="title emphasis">
         Somos el brazo derecho<br>
@@ -120,7 +121,7 @@
     </section>
     <!-- End Selection Process -->
 
-    <!-- About -->
+    <!-- About: why us -->
     <section class="about container">
       <h1 class="title emphasis">¿Por qué<span class="orange"> atomic?</span></h1>
       <div class="about-specs flex">
@@ -150,7 +151,7 @@
       </div>
     </section>
 
-    <!-- characteristics -->
+    <!-- characteristics table-->
     <div class="about-table">
       <div class="about-char">
       </div>

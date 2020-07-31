@@ -6,6 +6,7 @@
 html{
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body{
   font-size: 1.6rem;
@@ -525,7 +526,7 @@ footer > .flex > div:nth-child(1){
   transform: rotate(180deg);
 }
 
-.datos .flex{
+.datos > .flex{
   height: calc(100vh - 9rem);
   align-items: stretch;
 }
