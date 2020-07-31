@@ -100,8 +100,7 @@ export class Event {
 
   //Show airplane window
   animateSendCode() {
-    $(".animate").detach();
-    let airplane = `<div class="animate sending-code">
+    let airplane = `<div class="animate sending-code airplane">
                       <div class="">
                         <img src="./assets/img/bgd/airplane.png" alt="">
                         <p>Te estamos enviando el código</p>
