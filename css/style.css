@@ -708,6 +708,10 @@ footer>.flex>div:nth-child(1) {
   flex-wrap: nowrap;
 }
 
+.step-number-container h1 {
+  margin: 1.5rem 0 0;
+}
+
 .step-number {
   width: 3rem;
   height: 3rem;

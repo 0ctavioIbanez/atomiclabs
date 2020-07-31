@@ -129,7 +129,7 @@ export class Event {
 
   //Send Confirmation mail
   sendEmail() {
-    fetch("./mail.php")
+    fetch("php/mail.php")
     .then( data => { return data.json() } )
     .then( res => { console.log(res) } );
   }

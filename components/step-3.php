@@ -28,9 +28,7 @@
             <span class="mb-3 flex wth-100">
               <div class="">
                 <?php
-                  if(isset($_SESSION['code'][0])){
-                    echo $_SESSION['number'][0];
-                  }
+                  include '../php/showNumber.php';
                 ?>
               </div>
               <div class="step-number-edit" step="2">
