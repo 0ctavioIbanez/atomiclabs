@@ -1,11 +1,14 @@
 import { Event } from './Event.js';
 
 export class Valida {
+
+  //Validate text field
   textField(fields){
     const regExp = /^([A-Zñáéíóú]+){5}$/i;
     let counter = 0;
     let res = "";
 
+    // increase counter when a field is not empty
     fields.forEach((item, i) => {
       if ( regExp.test(item.value) ) {
         counter++;
@@ -34,7 +37,6 @@ export class Valida {
 
     fetch("php/testAltiriaSms.php", conf)
     .then( data => { return data.json() } )
-    .then( res => { console.log(res) } );
   }
 
   verifyCode(codeToVerify){
@@ -51,16 +53,15 @@ export class Valida {
     fetch("php/testAltiriaSms.php", conf)
     .then( data => { return data.json() } )
     .then( res => {
-      this.event(res);
+      this.auxiliarEvent(res);  // Send to auxiliar method due to this result can't be assignable to a global var
     });
   }
 
-  event(res){
-
+  auxiliarEvent(res){
     if (res.status === "ok") {
-      const evt = new Event(3);
-      evt.animateVerified();
-      evt.updateBar();
+      const evt = new Event(3); // this will increase and load next step according this number
+      evt.animateVerified();    // pop up thick animation
+      evt.updateBar();          // Increase progress bar and load next step
     }
     else {
       const evt = new Event();
