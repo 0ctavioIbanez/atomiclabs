@@ -77,6 +77,10 @@ export class Event {
     }
   }
 
+  previousStep(){
+    let destin = this.step;
+  }
+
   //Show airplane window
   animateSendCode() {
     $(".animate").detach();

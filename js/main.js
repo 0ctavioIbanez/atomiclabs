@@ -1,9 +1,5 @@
-import {
-  Event
-} from './Event.js';
-import {
-  Valida
-} from './Valida.js';
+import { Event } from './Event.js';
+import { Valida } from './Valida.js';
 
 
 /* ============================================================
@@ -107,6 +103,15 @@ $("body").click(function(event) {
   }
 });
 
+/* ============================================================
+  Previous step
+ ============================================================ */
+ $("body").click(function(event) {
+   let target = event.target.getAttribute("class");
+   if (target === "back") {
+     
+   }
+ });
 
 /*Index: more info (scroll down)*/
 $(".more-info").click(function(event) {
