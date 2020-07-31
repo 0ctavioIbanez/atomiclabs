@@ -48,6 +48,4 @@
   </div>
 </section>
 
-
-
 <?php include 'components/footer.php'; ?>

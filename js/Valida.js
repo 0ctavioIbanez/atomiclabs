@@ -61,11 +61,11 @@ export class Valida {
       });
   }
 
-  auxiliarEvent(res) {
+  async auxiliarEvent(res) {
     if (res.status === "ok") {
       const evt = new Event(3); // this will increase and load next step according this number
-      evt.animateVerified(); // pop up thick animation
-      evt.updateBar(); // Increase progress bar and load next step
+      await evt.animateVerified(); // pop up thick animation
+      await evt.updateBar(); // Increase progress bar and load next step
     } else {
       const evt = new Event();
       evt.errorDialog("El código es incorrecto");

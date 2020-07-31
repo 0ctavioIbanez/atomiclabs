@@ -33,7 +33,7 @@ export class Event {
     $(".animate").detach();
     let success = `<div class="animate success-next">
                     <div class="fire"></div>
-                    <img src="./assets/img/bgd/rocket-removebg-preview.png" alt="">
+                    <img src="./assets/img/bgd/rocket-removebg-preview.png" alt="rockets">
                   </div>`;
     $("body").append(success);
     setTimeout(() => {
@@ -118,7 +118,7 @@ export class Event {
     let verified = `<div class="sending-code">
                       <div class="">
                         <img src="./assets/img/icons/checkmark.png" alt="">
-                        <p>Te estamos enviando el código</p>
+                        <p>Código verificado</p>
                       </div>
                     </div>`;
     $("body").append(verified).fadeIn("fast");

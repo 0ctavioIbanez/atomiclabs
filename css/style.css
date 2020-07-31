@@ -827,7 +827,6 @@ footer>.flex>div:nth-child(1) {
   height: 100vh;
   background-color: var(--space-blue);
   padding-top: calc(40vh - 10rem);
-  display: none;
 }
 
 .sending-code div {
