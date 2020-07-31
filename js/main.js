@@ -104,13 +104,21 @@ $("body").click(function(event) {
 });
 
 /* ============================================================
-  Previous step
+  Previous step && edit number
  ============================================================ */
  $("body").click(function(event) {
    let target = event.target.getAttribute("class");
    let destinStep = parseInt(event.target.getAttribute("step"));
+   console.log(target);
+
    if (target === "back") {
      const evt = new Event(destinStep);
+     evt.previousStep();
+   }
+
+   //Edit phone number
+   else if (destinStep === 2) {
+     const evt = new Event(2);
      evt.previousStep();
    }
  });

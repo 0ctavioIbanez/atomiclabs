@@ -25,13 +25,18 @@
 
             <p class="bold">Te enviamos un SMS al número:</p>
             <!-- Phone number printed by session  -->
-            <p class="mb-3">
-              <?php
-                if(isset($_SESSION['code'][0])){
-                  echo "Aqui va el número";
-                }
-              ?>
-            </p>
+            <span class="mb-3 flex wth-100">
+              <div class="">
+                <?php
+                  if(isset($_SESSION['code'][0])){
+                    echo $_SESSION['number'][0];
+                  }
+                ?>
+              </div>
+              <div class="step-number-edit" step="2">
+                <img src="./assets/img/icons/Group _4026.png" step="2" alt="edit">
+              </div>
+            </span>
             <p class="mb-3">Ingresa el código de verificación</p>
 
             <!-- form fields -->

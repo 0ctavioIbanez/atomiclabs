@@ -12,6 +12,7 @@ function sendSMS(){
   $number = intval($_POST["number"]);
   $code = rand(1000, 9999);
   $_SESSION['code'][0] = $code;
+  $_SESSION['number'][0] = $number;
 
   include('httpPHPAltiria.php');
 

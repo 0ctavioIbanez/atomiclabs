@@ -54,7 +54,7 @@ export class Event {
         });
       });
     } else if (this.step == 2) {
-      $(".datos .flex").load("components/step-3.html", () => {
+      $(".datos .flex").load("components/step-3.php", () => {
         $(".prog-bar .loaded-prog-bar").css({
           'transition': 'all .3s ease',
           'width': '62.5%'
@@ -88,7 +88,7 @@ export class Event {
         });
       });
     } else if (this.step == 3) {
-      $(".datos .flex").load("components/step-3.html", () => {
+      $(".datos .flex").load("components/step-3.php", () => {
         $(".prog-bar .loaded-prog-bar").css({
           'transition': 'all .3s ease',
           'width': '62.5%'
