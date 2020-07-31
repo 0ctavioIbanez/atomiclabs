@@ -28,7 +28,7 @@ export class Event {
     }, 1500);
   }
 
-  //Rocks animation
+  //Rocket animation
   successAnimate() {
     $(".animate").detach();
     let success = `<div class="animate success-next">

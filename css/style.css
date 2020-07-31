@@ -800,14 +800,16 @@ footer>.flex>div:nth-child(1) {
 
 .success-next {
   position: fixed;
+  z-index: 10;
   top: 0;
   left: -200vh;
 }
 
 .success-next img {
-  height: 130vh;
+  height: 100vh;
   width: auto;
-  transform: rotate(50deg);
+  position: relative;
+  z-index: 6;
 }
 
 .fire {
@@ -817,6 +819,7 @@ footer>.flex>div:nth-child(1) {
   background: radial-gradient(yellow, rgb(208, 123, 34), red);
   transform: rotate(45deg);
   position: absolute;
+  z-index: 5;
   left: -30rem;
   bottom: 20rem;
 }
